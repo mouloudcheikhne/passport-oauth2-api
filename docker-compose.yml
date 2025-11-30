@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app/src 
+
+    env_file:
+      - .env
+
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mouloud1233
+      MONGO_INITDB_DATABASE: authdb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data-auth:/data/db
+
+volumes:
+  mongo-data-auth:

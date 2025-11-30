@@ -103,33 +103,3 @@ Exemple curl (protection) :
 ```bash
 curl http://localhost:5000/protected -H "Authorization: Bearer <token>"
 ```
-
-## Stratégie de commit recommandée
-
-Pour faciliter la traçabilité, commitez chaque tâche/unité de travail séparément avec des messages clairs, par ex :
-
-- `feat: add signup route`
-- `fix: handle missing email in google callback`
-- `docs: add README.md`
-- `chore: update dependencies`
-
-## Vérification rapide (quality gates)
-
-- Build : ce projet est une API Node; vérifier `npm start` démarre le serveur.
-- Lint/Types : pas de configuration de linter fournie — si vous en ajoutez, exécutez `npm run lint`.
-- Tests : aucun test automatisé fourni; vous pouvez ajouter `mocha`/`jest` selon vos préférences.
-
-## Notes et améliorations possibles
-
-- Ajouter des tests unitaires et d'intégration (signup/login/Google)
-- Ajouter un linter et une CI (GitHub Actions) pour exécuter les tests et lint
-- Ajouter des scripts de migration ou un seed pour faciliter le développement
-- Rendre la stratégie Google configurable (scopes, options de session)
-
-## Qui contacter
-
-Mettre vos coordonnées ici ou ouvrir une issue dans le repo pour toute question.
-
----
-
-Fait automatiquement : README ajouté et commité localement (voir historique de commits). Pour toute modification de contenu, dites-moi ce que vous voulez changer et je mettrai à jour le README et je créerai un commit séparé par tâche.
